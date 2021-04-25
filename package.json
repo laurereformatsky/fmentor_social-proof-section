@@ -1,0 +1,13 @@
+{
+  "name": "frontend-mentor_social-proof-section",
+  "version": "1.0.0",
+  "description": "The challenge is to build out this social proof section and get it looking as close to the design as possible.",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css",
+    "prefix": "postcss ./css/styles.css --use autoprefixer -d ./css/"
+  },
+  "author": "Laure Réformatsky",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}
