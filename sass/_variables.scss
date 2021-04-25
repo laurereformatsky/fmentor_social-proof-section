@@ -1,0 +1,51 @@
+// COLORS
+$primary-color: hsl(300, 43%, 22%);
+$secondary-color: hsl(333, 80%, 67%);
+$neutral-color-dark: hsl(303, 10%, 53%);
+$neutral-color-light: hsl(300, 24%, 96%);
+$neutral-color-white: hsl(0, 0%, 100%);
+
+// FONTS
+$font-family: "Spartan", sans-serif;
+$base-font-size: 93.75%; // 15px
+
+$font-size: (
+  "x-small": 0.867rem, // 13px
+  "small": 0.933rem, // 14px
+  "medium": 1rem, // 15px
+  "large": 2.133rem, // 32px
+  "x-large": 3.2rem // 48px
+);
+
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+$line-height: (
+  "x-small": 1.467rem, // 22px
+  "small": 1.6rem, // 24px
+  "medium": 1.667rem, // 25px
+  "large": 2.133rem, // 32px
+  "x-large": 3.2rem // 48px
+);
+
+$letter-spacing: (
+  "x-small": -0.017rem, // -0.25px
+  "small": -0.02rem, // -0.30px
+  "medium": -0.022rem, // -0.33px
+  "large": -0.023rem // -0.35px
+);
+
+// BASE
+$base-one: 1rem;
+$base-half: 0.5rem;
+
+// LAYOUT
+$breakpoints: (
+  "desktop": 1090px,
+  "tab": 945px,
+  "mini-tab": 746px,
+  "mobile": 375px
+);

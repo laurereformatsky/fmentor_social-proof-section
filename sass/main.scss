@@ -1,0 +1,289 @@
+@import "../sass/_variables.scss";
+@import "../sass/_mixins.scss";
+
+/* GENERAL STYLES */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size; // 15px
+}
+
+body {
+  padding: 8.533rem 1.6rem 0; // 128px 24px 0
+  background-color: $neutral-color-white;
+  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  font-family: $font-family;
+
+  @include desktop {
+    height: 100vh;
+  }
+
+  @include mobile {
+    padding-top: 5.333rem; // 80px
+    background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  }
+}
+
+header.header {
+  display: none;
+}
+
+footer {
+  margin-top: 6.667rem; // 100px
+  padding: $base-one;
+}
+
+p.attribution {
+  color: $primary-color;
+  font-size: map-get($font-size, "small"); // 14px
+  font-weight: map-get($font-weight, "medium");
+  text-align: center;
+
+  @include mini-tab {
+    font-size: map-get($font-size, "x-small"); // 13px
+  }
+
+  > a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: all 0.25s;
+
+    &:hover,
+    &:active {
+      background-color: $neutral-color-light;
+      padding: $base-half;
+      border-radius: $base-half;
+      transform: scale(1.5);
+      font-weight: map-get($font-weight, "bold");
+      transition: all 0.25s;
+    }
+  }
+}
+
+span.esperluette {
+  color: $secondary-color;
+  font-weight: map-get($font-weight, "bold");
+}
+
+/* MAIN CONTAINER */
+main.main-container {
+  max-width: 74.067rem; // 1111px
+  margin: 0 auto;
+}
+
+/* MAIN WRAPPER */
+div.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem; // 30px
+
+  @include tab {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto)); // 327px
+    grid-gap: 3rem; // 45px
+    justify-content: center;
+  }
+}
+
+/* MAIN PRESENTATION */
+.main-presentation {
+  max-width: 28.467rem; // 427px
+  text-align: left;
+
+  @include tab {
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: $base-one;
+    color: $primary-color;
+    font-size: map-get($font-size, "x-large"); // 48px
+    font-weight: map-get($font-weight, "bold");
+    line-height: map-get($line-height, "x-large"); // 48px
+    letter-spacing: map-get($letter-spacing, "large"); // -0.35px
+
+    @include mobile {
+      font-size: map-get($font-size, "large"); // 32px
+      line-height: map-get($line-height, "large"); // 32px
+    }
+  }
+
+  &__paragraph {
+    color: $neutral-color-dark;
+    font-size: map-get($font-size, "medium"); // 15px
+    font-weight: map-get($font-weight, "medium");
+    line-height: map-get($line-height, "medium"); // 25px
+    letter-spacing: map-get($letter-spacing, "large"); // -0.35px
+  }
+}
+
+/* CONTAINER STARS REVIEWS */
+div.stars-reviews-container {
+  max-width: 36rem; // 540px
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.067rem; // 16px
+}
+
+/* STARS REVIEWS */
+.stars-reviews {
+  width: 100%;
+  max-width: 29.667rem; // 445px
+  height: 3.733rem; // 56px
+  padding: 0 2.133rem; // 0 32px
+  background-color: $neutral-color-light;
+  border-radius: $base-half;
+  display: grid;
+  grid-template-columns: 7.867rem 1fr; // 118px 1fr
+  grid-gap: 2.133rem; // 32px
+  align-items: center;
+
+  @include tab {
+    height: 5.2rem; // 78px
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-gap: 0.933rem; // 14px
+    justify-items: center;
+    align-content: center;
+  }
+
+  &-1 {
+    justify-self: start;
+  }
+
+  &-2 {
+    justify-self: center;
+  }
+
+  &-3 {
+    justify-self: end;
+  }
+
+  &__icon {
+    width: 7.867rem; // 118px
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.533rem; // 8px
+
+    img {
+      width: 1.133rem; // 17px
+      height: 1.067rem; // 16px
+    }
+  }
+
+  &__paragraph {
+    height: 0.933rem; // 14px
+    color: $primary-color;
+    font-size: map-get($font-size, "small"); // 14px
+    font-weight: map-get($font-weight, "bold");
+    letter-spacing: map-get($letter-spacing, "medium"); // -0.33px
+  }
+}
+
+/* CONTAINER REVIEWS */
+div.reviews-container {
+  min-height: 17.733rem; // 266px
+  margin: 3.267rem 0; // 49px 0
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto)); // 327px
+  grid-gap: 2rem; // 30px
+
+  @include mini-tab {
+    grid-template-columns: minmax(21.8rem, 28.467rem); // 327px 427px
+    justify-content: center;
+  }
+}
+
+/* CARD REVIEWS */
+.card-reviews {
+  width: 100%;
+  height: 15.6rem; // 234px
+  background-color: $primary-color;
+  padding: 2.6rem 2.067rem; // 39px 31px
+  border-radius: $base-half;
+
+  @include mobile {
+    height: 16.533rem; // 248px
+  }
+
+  &-1 {
+    align-self: start;
+  }
+
+  &-2 {
+    align-self: center;
+  }
+
+  &-3 {
+    align-self: end;
+  }
+
+  // HEADER CARD REVIEWS
+  &__header {
+    height: 2.8rem; // 42px
+    margin-bottom: 1.867rem; // 28px
+
+    // PROFILE CARD REVIEWS
+    &__buyer-profile {
+      width: 2.8rem; // 42px
+      height: 2.8rem; // 42px
+      margin-right: 1.467rem; // 22px
+      float: left;
+      
+      > img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+
+    // HEADING CARD REVIEWS
+    &__wraptitle {
+      height: 2.8rem; // 42px
+      display: inline-block;
+      font-size: map-get($font-size, "x-small"); // 13px
+
+      &__heading {
+        margin-bottom: 0.2rem;
+        color: $neutral-color-light;
+        font-weight: map-get($font-weight, "bold");
+      }
+
+      &__subtitle {
+        color: $secondary-color;
+        font-weight: map-get($font-weight, "medium");
+      }
+    }
+  }
+
+  // PARAGRAPH CARD REVIEWS
+  &__paragraph {
+    color: $neutral-color-light;
+    font-size: map-get($font-size, "x-small"); // 13px
+    font-weight: map-get($font-weight, "medium");
+    line-height: map-get($line-height, "x-small"); // 22px
+    letter-spacing: map-get($letter-spacing, "x-small"); // -0.25px
+    text-align: left;
+
+    &::before {
+      content: "“";
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "”";
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
