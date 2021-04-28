@@ -262,4 +262,68 @@ div.reviews-container {
   right: 0;
 }
 
+/* RESPONSIVE DESIGN */
+@media only screen and (min-width: 1090px) and (orientation: landscape) {
+  /* GENERAL STYLES */
+  body {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 945px) and (orientation: portrait) {
+  /* MAIN WRAPPER */
+  div.main-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto));
+    grid-gap: 3rem;
+    justify-content: center;
+  }
+
+  /* MAIN PRESENTATION */
+  .main-presentation {
+    text-align: center;
+  }
+
+  /* STARS REVIEWS */
+  .stars-reviews {
+    height: 5.2rem;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-gap: 0.933rem;
+    justify-items: center;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 746px) and (orientation: portrait) {
+  /* GENERAL STYLES */
+  p.attribution {
+    font-size: 0.867rem;
+  }
+
+  /* CONTAINER REVIEWS */
+  div.reviews-container {
+    grid-template-columns: minmax(21.8rem, 28.467rem);
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+  /* GENERAL STYLES */
+  body {
+    padding-top: 5.333rem;
+    background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  }
+
+  /* MAIN PRESENTATION */
+  .main-presentation__heading {
+    font-size: 2.133rem;
+    line-height: 2.133rem;
+  }
+
+  /* CARD REVIEWS */
+  .card-reviews {
+    height: 16.533rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

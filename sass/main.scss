@@ -241,4 +241,66 @@ div.reviews-container {
   }
 }
 
+/* RESPONSIVE DESIGN */
+@media only screen and (min-width: map-get($breakpoints, "desktop")) and (orientation: landscape) {
+  /* GENERAL STYLES */
+  body {
+    height: 100vh;
+  }
+}
 
+@media only screen and (max-width: map-get($breakpoints, "tab")) and (orientation: portrait) {
+  /* MAIN WRAPPER */
+  div.main-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto)); // 327px
+    grid-gap: 3rem; // 45px
+    justify-content: center;
+  }
+
+  /* MAIN PRESENTATION */
+  .main-presentation {
+    text-align: center;
+  }
+
+  /* STARS REVIEWS */
+  .stars-reviews {
+    height: 5.2rem; // 78px
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-gap: 0.933rem; // 14px
+    justify-items: center;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: map-get($breakpoints, "mini-tab")) and (orientation: portrait) {
+  /* GENERAL STYLES */
+  p.attribution {
+    font-size: map-get($font-size, "x-small"); // 13px
+  }
+
+  /* CONTAINER REVIEWS */
+  div.reviews-container {
+    grid-template-columns: minmax(21.8rem, 28.467rem); // 327px 427px
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: map-get($breakpoints, "mobile")) and (orientation: portrait) {
+  /* GENERAL STYLES */
+  body {
+    padding-top: 5.333rem; // 80px
+    background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  }
+
+  /* MAIN PRESENTATION */
+  .main-presentation__heading {
+    font-size: map-get($font-size, "large"); // 32px
+    line-height: map-get($line-height, "large"); // 32px
+  }
+
+  /* CARD REVIEWS */
+  .card-reviews {
+    height: 16.533rem; // 248px
+  }
+}
