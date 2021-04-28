@@ -176,7 +176,8 @@ div.reviews-container {
   margin: 3.267rem 0;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto));
+  -ms-grid-columns: (minmax(21.8rem, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto));
   grid-gap: 2rem;
 }
 
@@ -273,7 +274,8 @@ div.reviews-container {
 @media only screen and (max-width: 945px) and (orientation: portrait) {
   /* MAIN WRAPPER */
   div.main-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto));
+    -ms-grid-columns: (minmax(21.8rem, auto))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto));
     grid-gap: 3rem;
     justify-content: center;
   }
@@ -287,7 +289,8 @@ div.reviews-container {
   .stars-reviews {
     height: 5.2rem;
     padding: 0;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     grid-gap: 0.933rem;
     justify-items: center;
     align-content: center;
@@ -302,7 +305,8 @@ div.reviews-container {
 
   /* CONTAINER REVIEWS */
   div.reviews-container {
-    grid-template-columns: minmax(21.8rem, 28.467rem);
+    -ms-grid-columns: minmax(21.8rem, 28.467rem);
+        grid-template-columns: minmax(21.8rem, 28.467rem);
     justify-content: center;
   }
 }
