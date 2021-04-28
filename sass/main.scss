@@ -1,5 +1,4 @@
 @import "../sass/_variables.scss";
-@import "../sass/_mixins.scss";
 
 /* GENERAL STYLES */
 *,
@@ -21,15 +20,6 @@ body {
   background-position: top left, bottom right;
   background-repeat: no-repeat, no-repeat;
   font-family: $font-family;
-
-  @include desktop {
-    height: 100vh;
-  }
-
-  @include mobile {
-    padding-top: 5.333rem; // 80px
-    background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
-  }
 }
 
 header.header {
@@ -46,10 +36,6 @@ p.attribution {
   font-size: map-get($font-size, "small"); // 14px
   font-weight: map-get($font-weight, "medium");
   text-align: center;
-
-  @include mini-tab {
-    font-size: map-get($font-size, "x-small"); // 13px
-  }
 
   > a {
     color: $primary-color;
@@ -84,22 +70,12 @@ div.main-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem; // 30px
-
-  @include tab {
-    grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto)); // 327px
-    grid-gap: 3rem; // 45px
-    justify-content: center;
-  }
 }
 
 /* MAIN PRESENTATION */
 .main-presentation {
   max-width: 28.467rem; // 427px
   text-align: left;
-
-  @include tab {
-    text-align: center;
-  }
 
   &__heading {
     margin-bottom: $base-one;
@@ -108,11 +84,6 @@ div.main-wrapper {
     font-weight: map-get($font-weight, "bold");
     line-height: map-get($line-height, "x-large"); // 48px
     letter-spacing: map-get($letter-spacing, "large"); // -0.35px
-
-    @include mobile {
-      font-size: map-get($font-size, "large"); // 32px
-      line-height: map-get($line-height, "large"); // 32px
-    }
   }
 
   &__paragraph {
@@ -144,15 +115,6 @@ div.stars-reviews-container {
   grid-template-columns: 7.867rem 1fr; // 118px 1fr
   grid-gap: 2.133rem; // 32px
   align-items: center;
-
-  @include tab {
-    height: 5.2rem; // 78px
-    padding: 0;
-    grid-template-columns: 1fr;
-    grid-gap: 0.933rem; // 14px
-    justify-items: center;
-    align-content: center;
-  }
 
   &-1 {
     justify-self: start;
@@ -194,11 +156,6 @@ div.reviews-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21.8rem, auto)); // 327px
   grid-gap: 2rem; // 30px
-
-  @include mini-tab {
-    grid-template-columns: minmax(21.8rem, 28.467rem); // 327px 427px
-    justify-content: center;
-  }
 }
 
 /* CARD REVIEWS */
@@ -208,10 +165,6 @@ div.reviews-container {
   background-color: $primary-color;
   padding: 2.6rem 2.067rem; // 39px 31px
   border-radius: $base-half;
-
-  @include mobile {
-    height: 16.533rem; // 248px
-  }
 
   &-1 {
     align-self: start;
@@ -287,3 +240,5 @@ div.reviews-container {
     }
   }
 }
+
+
