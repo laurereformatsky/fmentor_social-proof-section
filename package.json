@@ -1,13 +1,23 @@
 {
   "name": "frontend-mentor_social-proof-section",
   "version": "1.0.0",
-  "description": "The challenge is to build out this social proof section and get it looking as close to the design as possible.",
+  "description": "Project made with Frontend Mentor",
   "main": "index.html",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/styles.css",
-    "prefix": "postcss ./css/styles.css --use autoprefixer -d ./css/"
+    "stylelint": "stylelint ./sass",
+    "htmlhint": "htmlhint ./index.html"
   },
   "author": "Laure Réformatsky",
   "license": "ISC",
-  "browserslist": "last 4 versions"
+  "devDependencies": {
+    "doiuse": "^4.4.1",
+    "htmlhint": "^1.1.4",
+    "postcss": "^8.4.12",
+    "postcss-scss": "^4.0.4",
+    "sass": "^1.51.0",
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-scss": "^4.2.0"
+  }
 }
