@@ -17,5 +17,8 @@
 #Code formatting Prettier
 .prettierignore
 
-#Stylelint file for verifing css files
+#Stylelint file for verifing css and sass files
 .stylelintrc.json
+
+# Files for the developpement in local do not commit - thanks !
+node_modules
