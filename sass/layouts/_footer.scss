@@ -1,0 +1,24 @@
+/* FOOTER */
+
+footer {
+  padding: $base-one;
+  margin: {
+    top:10rem;
+  }
+}
+
+.attribution {
+  > a {
+    transition: all 0.25s;
+
+    &:hover,
+    &:active {
+      padding: $base-half;
+      background-color: $neutral-color-light;
+      border-radius: $base-half;
+      transform: scale(1.5);
+      font-weight: map-get($font-weight, "bold");
+      transition: all 0.25s;
+    }
+  }
+}

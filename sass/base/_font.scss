@@ -1,0 +1,84 @@
+/* FONTS */
+
+h2,
+h3,
+small,
+p[class$="__title"],
+.esperluette {
+  font-weight: map-get($font-weight, "bold");
+}
+
+h2,
+p[class$="__title"],
+p.attribution,
+a {
+  color: $primary-color;
+}
+
+// TITLES
+h2 {
+  font-size: map-get($font-size, "x-large");
+  line-height: map-get($line-height, "x-large");
+  letter-spacing: map-get($letter-spacing, "large");
+  margin: {
+    bottom: $base-one;
+  }
+
+  @include mobile-only {
+    font-size: map-get($font-size, "large");
+    line-height: map-get($line-height, "large");
+  }
+}
+
+h3 {
+  color: $neutral-color-light;
+  font-weight: map-get($font-weight, "bold");
+  margin: {
+    bottom: 0.3rem;
+  }
+}
+
+p[class$="__title"] {
+  font-size: map-get($font-size, "small");
+  letter-spacing: map-get($letter-spacing, "medium");
+}
+
+// PARAGRAPHS
+p,
+small {
+  font-weight: map-get($font-weight, "medium");
+}
+
+.main-presentation > p {
+  color: $neutral-color-dark;
+  font-size: map-get($font-size, "medium");
+  line-height: map-get($line-height, "medium");
+  letter-spacing: map-get($letter-spacing, "large");
+}
+
+.card-reviews > p {
+  color: $neutral-color-light;
+  font-size: map-get($font-size, "x-small");
+  line-height: map-get($line-height, "x-small");
+  letter-spacing: map-get($letter-spacing, "x-small");
+  text-align: left;
+}
+
+// SUBTITLE
+small {
+  color: $secondary-color;
+}
+
+// ATTRIBUTION
+p.attribution {
+  font-size: map-get($font-size, "small");
+  text-align: center;
+
+  @include mini-tablet-only {
+    font-size: map-get($font-size, "x-small");
+  }
+}
+
+.esperluette {
+  color: $secondary-color;
+}

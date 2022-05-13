@@ -1,0 +1,38 @@
+/* GENERAL STYLES */
+* {
+  &,
+  &::before,
+  &::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: $base-font-size; // 10px
+}
+
+body {
+  padding: 12.8rem 2.4rem 0;
+  background-color: $neutral-color-white;
+  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  font-family: $font-family;
+
+  @include desktop-only {
+    height: 100vh;
+  }
+
+  @include mobile-only {
+    background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+    padding: {
+      top: 8rem;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+/* CONTAINER REVIEWS */
+
+div.reviews-container {
+  min-height: 26.6rem;
+  margin: 4.9rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32.7rem, auto));
+  gap: 3rem;
+
+  @include mini-tablet-only {
+    grid-template-columns: minmax(32.7rem, 42.7rem);
+    justify-content: center;
+  }
+}

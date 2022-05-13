@@ -1,0 +1,30 @@
+/* MAIN */
+
+// CONTAINER
+main.main-container {
+  max-width: 111.1rem;
+  margin: 0 auto;
+}
+
+// WRAPPER
+div.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+
+  @include tablet-only {
+    grid-template-columns: repeat(auto-fit, minmax(32.7rem, auto));
+    gap: 4.5rem;
+    justify-content: center;
+  }
+}
+
+// PRESENTATION
+.main-presentation {
+  max-width: 42.7rem;
+  text-align: left;
+
+  @include tablet-only {
+    text-align: center;
+  }
+}

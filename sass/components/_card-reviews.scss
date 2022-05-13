@@ -1,0 +1,73 @@
+/* CARD REVIEWS */
+
+.card-reviews {
+  width: 100%;
+  height: 23.4rem;
+  background-color: $primary-color;
+  padding: 3.9rem 3.1rem;
+  border-radius: $base-half;
+
+  @include mobile-only {
+    height: 24.8rem;
+  }
+
+  &-1 {
+    align-self: start;
+  }
+
+  &-2 {
+    align-self: center;
+  }
+
+  &-3 {
+    align-self: end;
+  }
+
+  // HEADER CARD REVIEWS
+  &__header {
+    height: 4.2rem;
+    margin: {
+      bottom: 2.8rem;
+    }
+
+    // PROFILE CARD REVIEWS
+    &__buyer-profile {
+      width: 4.2rem;
+      height: 4.2rem;
+      float: left;
+      margin: {
+        right: 2.2rem;
+      }
+
+      > img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+
+    // HEADING CARD REVIEWS
+    &__wraptitle {
+      height: 4.2rem;
+      display: inline-block;
+      font-size: map-get($font-size, "x-small");
+    }
+  }
+
+  // PARAGRAPH CARD REVIEWS
+  &__paragraph {
+    &::before {
+      content: "“";
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "”";
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

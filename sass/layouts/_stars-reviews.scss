@@ -1,0 +1,8 @@
+/* CONTAINER STARS REVIEWS */
+
+div.stars-reviews-container {
+  max-width: 54rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.6rem;
+}
